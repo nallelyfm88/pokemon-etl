@@ -8,8 +8,11 @@ it into an table in Snowflake. All of these will be done using Python and Spark 
 
 Url for Pokemon data: [Pokemon API](https://raw.githubusercontent.com/ClaviHaze/CDMX009-Data-Lovers/master/src/data/pokemon/pokemon.json)
 
+![ETL-Pipeline](https://i.ibb.co/dWDr0G7/Screen-Shot-2021-03-17-at-10-46-56.png)
+
+
 To orchestrate this process, we will use AWS Step Functions where we will have 3 steps (each of them a glue job) to manage de data:
 
-· Data ingestion
-· Data Transform
-· Data Load
+* Data ingestion
+* Data Transform
+* Data Load
