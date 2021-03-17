@@ -54,4 +54,4 @@ to s3 (s3:// <your-bucket>/prepared/)
 
 In this job, you will take the data already transformed and you will load it into a table in Snowflake.
 
-## ETL Pipeline created by : [dianapatrong](https://github.com/dianapatrong)
+### ETL Pipeline created by : [dianapatrong](https://github.com/dianapatrong)
