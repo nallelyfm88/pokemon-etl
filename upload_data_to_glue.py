@@ -22,8 +22,7 @@ def main():
 
 
 def read_df(spark):
-    df = spark.read.json(
-        's3://aws-glue-pokemon-data-nallely/data/part-00079-fd9b37c5-0981-4c37-a1b0-1d4f561547d1-c000.json')
+    df = spark.read.json('s3://aws-glue-pokemon-data-nallely/data//*.json')
     return df
 
 
