@@ -11,8 +11,30 @@ Url for Pokemon data: [Pokemon API](https://raw.githubusercontent.com/ClaviHaze/
 ![ETL-Pipeline](https://i.ibb.co/dWDr0G7/Screen-Shot-2021-03-17-at-10-46-56.png)
 
 
-To orchestrate this process, we will use AWS Step Functions where we will have 3 steps (each of them a glue job) to manage de data:
+To orchestrate this process, we will use AWS Step Functions where we will have 3 steps 
+(each of them a glue job) to manage de data:
 
 * Data ingestion
 * Data Transform
 * Data Load
+
+![Step Function](https://i.ibb.co/q1Qsdzr/Screen-Shot-2021-03-17-at-10-50-10.png)
+
+
+## Data ingestion
+
+This is the first glue job, in this one you will extract the data from the API and you will 
+store it in a bucket in s3 (s3://<your-bucket>/raw/)
+  
+  
+## Data transformations:
+The second glue job is for the data transformation, you will take the raw data and then apply 
+the transformations below, then you will write to a table in AWS Glue Data Catalog where you 
+will specify the schema of your data already transformed which under the hood will be uploaded 
+to s3 (s3:// <your-bucket>/prepared/)
+  
+  * 1. Add a column for the calculation of the BMI (Body Mass Index) of the Pokemon
+  
+    ![Formula](https://i.ibb.co/qFJ8Wss/Screen-Shot-2021-03-17-at-10-54-39.png)
+  
+  * 
